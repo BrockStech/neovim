@@ -1,11 +1,3 @@
---[[
-
-    If you don't know anything about Lua, I recommend taking some time to read through
-    a guide. One possible example which will only take 10-15 minutes:
-      - https://learnxinyminutes.com/docs/lua/
-
---]]
-
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
@@ -30,6 +22,8 @@ vim.opt.cursorline = true
 vim.opt.scrolloff = 10
 vim.opt.hlsearch = true
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+vim.opt.relativenumber = true
+vim.opt.autoindent = true
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
@@ -361,6 +355,7 @@ require('lazy').setup {
 
   { -- Collection of various small independent plugins/modules
     'echasnovski/mini.nvim',
+
     config = function()
       -- Better Around/Inside textobjects
       --
@@ -428,4 +423,5 @@ require('lazy').setup {
       end)
     end,
   },
+  { 'ThePrimeagen/vim-be-good' },
 }
