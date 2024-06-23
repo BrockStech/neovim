@@ -1,7 +1,7 @@
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
-vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
+vim.keymap.set('n', '<leader>;', vim.cmd.Ex)
 
 -- move selected text
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
